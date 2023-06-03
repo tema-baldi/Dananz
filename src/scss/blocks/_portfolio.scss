@@ -1,0 +1,107 @@
+.portfolio {
+    margin-bottom: 160px;
+
+    @media (max-width: $md) {
+        margin-bottom: 50px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        &+.portfolio__inner {
+            margin-top: 40px;
+        }
+
+        &:nth-child(odd) {
+            flex-direction: row-reverse;
+
+            .portfolio__author {
+                right: initial;
+                left: -196px;
+                @media (max-width: 1050px) {
+                   right: 0;
+                   left: initial;
+                }
+            }
+            @media (max-width: 1050px) {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 1050px) {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        max-width: 883px;
+        width: 100%;
+        position: relative;
+    }
+
+    &__author {
+        padding: 17px 50px 17px 20px;
+        max-width: 280px;
+        filter: drop-shadow(10px 10px 40px rgba(0, 0, 0, 0.05));
+        background: $color-white;
+        display: grid;
+        grid-template-columns: 52px auto;
+        grid-template-rows: repeat(2, 26px);
+        column-gap: 20px;
+        position: absolute;
+        top: 27px;
+        right: -201px;
+        transition: all .2s ease-in;
+
+        &:hover {
+            transform: translate(-10px, -10px);
+            outline: 2px solid $color-black;
+        }
+
+        @media (max-width: 1050px) {
+            right: 0;
+        }
+
+        @media (max-width: $md) {
+            position: initial;
+            max-width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+            &:hover {
+                transform: translate(-5px, -5px);
+            }
+        }
+
+    }
+
+    picture {
+        grid-row: 1/-1;
+    }
+
+    &__author-name {
+        font-weight: 600;
+        line-height: 1.4;
+        color: $color-black;
+    }
+
+    &__text-box {
+        flex-basis: 223px;
+        margin-top: 200px;
+        flex-shrink: 0;
+
+        @media (max-width: 1050px) {
+            margin-top: 0;
+            flex-basis: auto;
+        }
+    }
+
+    &__text {
+        margin-bottom: 40px;
+
+        @media (max-width: 1050px) {
+            margin-bottom: 10px;
+        }
+    }
+
+}

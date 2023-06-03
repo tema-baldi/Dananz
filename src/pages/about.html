@@ -1,0 +1,84 @@
+@@include('../components/head.html', { "title": "About Us" })
+@@include('../components/header2.html')
+<main class="main">
+   <section class="page-promo">
+      <div class="container">
+         <h1 class="page-promo__title title">About</h1>
+         <p class="page-promo__text">
+            It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking at its layout.
+         </p>
+         <picture>
+            <source srcset="@images/about-page-bg.avif" type="image/avif">
+            <source srcset="@images/about-page-bg.webp" type="image/webp">
+            <img class="page-promo__img" src="@images/about-page-bg.jpg" alt="img">
+         </picture>
+      </div>
+   </section>
+   <section class="achievement">
+      <div class="container">
+         <h2 class="achievement__title title">
+            ACHIEVEMENT
+         </h2>
+         <p class="achievement__subtitle subtitle">
+            interior customization with Danaanz, best quality with professional workers
+         </p>
+         <div class="achievement__inner">
+            <picture class="achievement__pic">
+               <source srcset="@images/achievement.avif" type="image/avif">
+               <source srcset="@images/achievement.webp" type="image/webp">
+               <img class="achievement__img" src="@images/achievement.jpg" alt="Interior">
+            </picture>
+            <dl class="achievement__stats-list stats__list">
+               <dd class="achievement__stats-numb stats__numb">350+</dd>
+               <dt class="achievement__stats-text stats__text">Project Completed</dt>
+               <dd class="achievement__stats-numb stats__numb">23+</dd>
+               <dt class="achievement__stats-text stats__text">Professional Teams</dt>
+               <dd class="achievement__stats-numb stats__numb">15+</dd>
+               <dt class="achievement__stats-text stats__text">Years Experience</dt>
+            </dl>
+         </div>
+      </div>
+   </section>
+   <section class="about-service">
+      <div class="container">
+         <h2 class="about-service__title title">
+            SERVICE
+         </h2>
+         <p class="about-service__subtitle subtitle">
+            Why Choose Us
+         </p>
+         <p class="about-service__text">
+            Customize your interior design into a dream place with the best designers and quality furniture. We
+            try our best to fulfill your expectations.
+         </p>
+         <div class="about-service__inner">
+            <div class="about-service__item">
+               <span class="about-service__decor"></span>
+               <h3 class="about-service__item-title">High Quality</h3>
+               <p class="about-service__item-text">
+                  Customize your interior design into a dream place with the best designers and quality furniture.
+                  We try our best to fulfill your expectations.
+               </p>
+            </div>
+            <div class="about-service__item">
+               <span class="about-service__decor"></span>
+               <h3 class="about-service__item-title">Professional Designer</h3>
+               <p class="about-service__item-text">
+                  Customize your interior design into a dream place with the best designers and quality furniture.
+                  We try our best to fulfill your expectations.
+               </p>
+            </div>
+            <div class="about-service__item">
+               <span class="about-service__decor"></span>
+               <h3 class="about-service__item-title">The Best Services</h3>
+               <p class="about-service__item-text">
+                  Customize your interior design into a dream place with the best designers and quality furniture.
+                  We try our best to fulfill your expectations.
+               </p>
+            </div>
+         </div>
+      </div>
+   </section>
+</main>
+@@include('../components/footer.html')

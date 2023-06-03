@@ -1,0 +1,28 @@
+@import './base/reset';
+@import './base/fonts';
+@import './base/vars';
+@import './base/mixins';
+@import './base/global';
+
+@import './blocks/nav';
+@import './blocks/promo';
+@import './blocks/about';
+@import './blocks/portfolio';
+@import './blocks/service';
+@import './blocks/product';
+@import './blocks/material';
+
+@import './blocks/page-promo';
+@import './blocks/achievement';
+@import './blocks/about-service';
+
+@import './blocks/services-achievement';
+
+@import './blocks/person';
+
+@import './blocks/contact';
+@import './blocks/location';
+
+@import './blocks/portfolio-details';
+
+@import './blocks/footer';

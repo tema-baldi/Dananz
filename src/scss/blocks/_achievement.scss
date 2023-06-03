@@ -1,0 +1,31 @@
+.achievement {
+    color: $color-black;
+    margin-bottom: 100px;
+
+    &__subtitle {
+        max-width: 740px;
+        margin-bottom: 56px;
+
+        @media (max-width: $md) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 60px;
+
+        @media (max-width: $lg) {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+    }
+
+    @media (max-width: $md) {
+        margin-bottom: 50px;
+    }
+
+}

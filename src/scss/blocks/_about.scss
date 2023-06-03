@@ -1,0 +1,6 @@
+.about {
+    margin-bottom: 60px;
+    @media (max-width: $md) {
+        margin-bottom: 30px;
+    }
+}

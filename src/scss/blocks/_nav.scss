@@ -1,0 +1,135 @@
+.nav {
+   padding: 40px 0;
+   margin-bottom: 60px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   @media (max-width: $md){
+      margin-bottom: 0;
+   }
+
+   &__list {
+      margin-left: auto;
+      display: flex;
+      gap: 74px;
+      align-items: center;
+
+      @media (max-width: $lg) {
+         transform: translateY(-200%);
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         gap: 50px;
+         background: #fff;
+         position: fixed;
+         top: 0;
+         right: 0;
+         bottom: 0;
+         left: 0;
+         z-index: 15;
+         transition: transform .5s ease-in;
+         overflow-y: hidden;
+
+         &.nav__list--active {
+            transform: translateY(0);
+         }
+      }
+   }
+
+   &__list-item {
+      position: relative;
+   }
+
+   &__list-link {
+      color: $color-secondary;
+      font-size: 16px;
+      position: relative;
+
+      &::after {
+         content: '';
+         transition: background .3s;
+      }
+
+      &:not(.nav__list-link--acitve):hover::after {
+         content: '';
+         height: 2px;
+         width: 100%;
+         background: $color-secondary;
+         position: absolute;
+         bottom: -5px;
+         left: 0;
+      }
+
+      &--acitve {
+         font-weight: 600;
+      }
+
+   }
+
+}
+
+.logo {
+   z-index: 16;
+}
+
+.mobile__btn {
+   display: none;
+   height: 29px;
+   width: 40px;
+   z-index: 16;
+
+   span {
+      height: 3px;
+      width: 100%;
+      background: #000;
+      display: block;
+      position: relative;
+      transition: background .4s;
+
+      &::before {
+         content: '';
+         position: absolute;
+         left: 0;
+         right: 0;
+         bottom: -10px;
+         height: 3px;
+         background: #000;
+         transition: all .2s ease-in;
+      }
+
+      &::after {
+         content: '';
+         position: absolute;
+         left: 0;
+         right: 0;
+         height: 3px;
+         top: -10px;
+         background: #000;
+         transition: all .2s ease-in;
+      }
+   }
+
+   &.mobile__btn--close {
+      span {
+         background: rgba(0, 0, 0, 0);
+         transition: background .4s;
+
+         &::before {
+            bottom: 0;
+            transform: rotate(135deg);
+            transition: all .2s ease-in;
+         }
+
+         &::after {
+            top: 0;
+            transform: rotate(-135deg);
+            transition: all .2s ease-in;
+         }
+      }
+   }
+
+   @media (max-width: $lg) {
+      display: block;
+   }
+}
